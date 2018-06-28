@@ -46,3 +46,37 @@ Text Domain:  accelerate-theme-child
 	color: #45ac9d;
 	text-transform: uppercase;
 }
+
+
+
+
+
+.case-study-sidebar{
+float: left;
+width: 45%;
+padding-right: 1.5em;
+}
+
+.case-study-sidebar span{
+  color: #808080;
+}
+
+.case-study-sidebar h4{
+  font-weight: 400;
+  font-size: .80em;
+  margin-top: 1em;
+}
+
+.case-study-sidebar p{
+  font-size: 1em;
+}
+
+.main-info{
+float: left;
+padding-left: 10px;
+width: 55%;
+}
+
+.main-info img{
+  padding: 5% 2%;
+}
