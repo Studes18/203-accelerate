@@ -4,7 +4,7 @@ Theme URI:    http://example.com/accelerate-theme-child/
 Description:  Accelerate Child Theme - Accelerate
 Author:   	Your Name!
 Author URI:   http://example.com
-Template: 	accelerate-theme
+Template: 	Accelerate Marketing
 Version:      2.0.0
 Tags:     	light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
 Text Domain:  accelerate-theme-child
@@ -29,6 +29,21 @@ Text Domain:  accelerate-theme-child
 	margin-bottom: 2em;
 }
 
+
+/*---------Homepage Featured Work--------------*/
+
+#featured-work-section{
+  display: block;
+}
+
+#featured-work-section h4{
+  text-align: center;
+}
+
+
+
+/*---------Homepage Featured Work--------------*/
+
 .blog-post h4 {
     font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
     color: #a6a6a6;
@@ -48,7 +63,7 @@ Text Domain:  accelerate-theme-child
 }
 
 
-
+/*-----Case Study-----*/
 
 
 .case-study-sidebar{
