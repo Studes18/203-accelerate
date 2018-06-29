@@ -40,9 +40,20 @@ Text Domain:  accelerate-theme-child
   text-align: center;
 }
 
+.homepage-featured-work {
+  display: flex;
+  list-style-type: none;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+}
+
+.individual-featured-work{
+  text-align: center;
+}
 
 
-/*---------Homepage Featured Work--------------*/
+/*---------Homepage Featured blog--------------*/
 
 .blog-post h4 {
     font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
@@ -62,6 +73,24 @@ Text Domain:  accelerate-theme-child
 	text-transform: uppercase;
 }
 
+/*---------Work page--------------*/
+
+.case-study-sidebar h5{
+  font-weight: 400;
+  font-size: .80em;
+  margin-top: 1em;
+  color: #808080;
+}
+
+.case-study-sidebar strong{
+  text-transform: uppercase;
+  color: #45ac9d;
+}
+
+.main-info img{
+  	width: 100%;
+  	height: auto;
+}
 
 /*-----Case Study-----*/
 
