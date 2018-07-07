@@ -18,6 +18,8 @@ function accelerate_child_scripts(){
 
 	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
+	wp_enqueue_style( 'accelerate-child-google-fonts', '//fonts.googleapis.com/css?family=Londrina+Solid:400,900' );
+
 }
 add_action( 'wp_enqueue_scripts', 'accelerate_child_scripts' );
 
@@ -37,3 +39,29 @@ function create_custom_post_types() {
     );
 }
 add_action( 'init', 'create_custom_post_types' );
+
+//Add contact class to body of contact-us page
+add_filter( 'body_class','accelerate_body_classes' );
+function accelerate_body_classes( $classes ) {
+
+  if ( is_page( 'contact-us' ) ) {
+    $classes[] = 'contact';
+  }
+	return $classes;
+}
+
+//Create dynamic sidebar
+function accelerate_theme_child_widget_init() {
+
+	register_sidebar( array(
+	    'name' =>__( 'Homepage sidebar', 'accelerate-theme-child'),
+	    'id' => 'sidebar-2',
+	    'description' => __( 'Appears on the static front page template', 'accelerate-theme-child' ),
+	    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	    'after_widget' => '</aside>',
+	    'before_title' => '<h3 class="widget-title">',
+	    'after_title' => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'accelerate_theme_child_widget_init' );

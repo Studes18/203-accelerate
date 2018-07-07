@@ -47,8 +47,7 @@ get_header(); ?>
 
 	</section>
 
-	<section class= "recent-posts">
- <div class= "site-content">
+	<section class= "recent-posts clearfix">
   <div class= "blog-post">
    <h4>From the Blog</h4>
     <?php query_posts('posts_per_page=1'); ?>
@@ -59,10 +58,23 @@ get_header(); ?>
 /*
 	<a href="<?php the_permalink(); ?>" class="read-more-link">Read More <span>&rsaquo;</span></a>
 */
-?>		 
+?>
      <?php endwhile; ?>
     <?php wp_reset_query(); ?>
    </div>
+
+	 <div class="twitter-sidebar">
+		 <?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+		 <div id="secondary" class="widget-area" role="complementary">
+			 <h4> Recent Tweet </h4>
+			 <h3> @SaraStuder18 </h3>
+		 	<?php dynamic_sidebar( 'sidebar-2' );?>
+			<div class="twitter-follow">
+				<a href="https://twitter.com/SaraStuder18" target="_blank" class="read-more-link">Follow Us <span>&rsaquo;</span></a>
+			</div>
+		 </div>
+		 <?php endif; ?>
+	 </div>
  </div>
 </section>
 <?php get_footer(); ?>
